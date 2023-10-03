@@ -68,3 +68,10 @@ keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- fzf grep
+-- nnoremap <leader>zf <cmd>lua require('fzf-lua').grep()<cr>
+
+-- ctl + y for to system clip
+local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap('n', '<C-y>', '"+y', opts)
+
